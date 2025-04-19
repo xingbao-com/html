@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索引擎大全</title>
+    <style>
+        :root {
+            --primary-color: #4285f4;
+            --google-red: #ea4335;
+            --google-blue: #4285f4;
+            --google-green: #34a853;
+            --google-yellow: #fbbc05;
+            --bing-color: #00809d;
+            --baidu-color: #2932e1;
+            --yahoo-color: #6001d2;
+            --duckduckgo-color: #de5833;
+            --dark-color: #202124;
+            --light-color: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 20px 0;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, var(--google-blue), var(--google-red), var(--google-yellow), var(--google-green));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .search-engines {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .search-engine {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 25px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .search-engine:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 15px;
+            object-fit: contain;
+        }
+        
+        .engine-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .engine-desc {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .search-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: auto;
+        }
+        
+        .search-btn:hover {
+            background-color: #3367d6;
+        }
+        
+        .google { --brand-color: var(--google-blue); }
+        .bing { --brand-color: var(--bing-color); }
+        .baidu { --brand-color: var(--baidu-color); }
+        .yahoo { --brand-color: var(--yahoo-color); }
+        .duckduckgo { --brand-color: var(--duckduckgo-color); }
+        .yandex { --brand-color: #ff0000; }
+        .ecosia { --brand-color: #44aa11; }
+        .ask { --brand-color: #d82027; }
+        
+        .search-engine .search-btn {
+            background-color: var(--brand-color);
+        }
+        
+        .search-engine .search-btn:hover {
+            background-color: var(--brand-color);
+            opacity: 0.9;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .search-engines {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>搜索引擎大全</h1>
+            <p>一键访问全球主流搜索引擎</p>
+        </header>
+        
+        <div class="search-engines">
+            <!-- Google -->
+            <div class="search-engine google">
+                <img src="https://www.google.com/images/branding/product/1x/gsa_512dp.png" alt="Google" class="logo">
+                <h2 class="engine-name">Google</h2>
+                <p class="engine-desc">全球最受欢迎的搜索引擎，提供精准的搜索结果</p>
+                <a href="https://www.google.com" target="_blank" class="search-btn">访问 Google</a>
+            </div>
+            
+            <!-- 百度 -->
+            <div class="search-engine baidu">
+                <img src="https://www.baidu.com/img/flexible/logo/pc/result.png" alt="Baidu" class="logo">
+                <h2 class="engine-name">百度</h2>
+                <p class="engine-desc">中文搜索引擎，提供网页、音乐、图片等搜索服务</p>
+                <a href="https://www.baidu.com" target="_blank" class="search-btn">访问 百度</a>
+            </div>
+            
+            <!-- Bing -->
+            <div class="search-engine bing">
+                <img src="https://www.bing.com/sa/simg/bing_p_rr_teal_min.ico" alt="Bing" class="logo">
+                <h2 class="engine-name">Bing</h2>
+                <p class="engine-desc">微软推出的搜索引擎，每日更新精美壁纸</p>
+                <a href="https://www.bing.com" target="_blank" class="search-btn">访问 Bing</a>
+            </div>
+            
+            <!-- Yahoo -->
+            <div class="search-engine yahoo">
+                <img src="https://s.yimg.com/cv/apiv2/default/icons/icon_yahoo_143x45.png" alt="Yahoo" class="logo">
+                <h2 class="engine-name">Yahoo</h2>
+                <p class="engine-desc">老牌搜索引擎，提供新闻、邮件等多种服务</p>
+                <a href="https://search.yahoo.com" target="_blank" class="search-btn">访问 Yahoo</a>
+            </div>
+            
+            <!-- DuckDuckGo -->
+            <div class="search-engine duckduckgo">
+                <img src="https://duckduckgo.com/assets/logo_social-media.png" alt="DuckDuckGo" class="logo">
+                <h2 class="engine-name">DuckDuckGo</h2>
+                <p class="engine-desc">注重隐私保护的搜索引擎，不追踪用户数据</p>
+                <a href="https://duckduckgo.com" target="_blank" class="search-btn">访问 DuckDuckGo</a>
+            </div>
+            
+            <!-- Yandex -->
+            <div class="search-engine yandex">
+                <img src="https://yastatic.net/s3/home-static/_/92/929b17f2d8064e5a0d0bdc36f1a0a2d5.png" alt="Yandex" class="logo">
+                <h2 class="engine-name">Yandex</h2>
+                <p class="engine-desc">俄罗斯领先的搜索引擎，在俄语市场占主导地位</p>
+                <a href="https://yandex.com" target="_blank" class="search-btn">访问 Yandex</a>
+            </div>
+            
+            <!-- Ecosia -->
+            <div class="search-engine ecosia">
+                <img src="https://cdn.ecosia.org/assets/images/logo/logo-ecosia.png" alt="Ecosia" class="logo">
+                <h2 class="engine-name">Ecosia</h2>
+                <p class="engine-desc">环保搜索引擎，将收入用于植树造林</p>
+                <a href="https://www.ecosia.org" target="_blank" class="search-btn">访问 Ecosia</a>
+            </div>
+            
+            <!-- Ask.com -->
+            <div class="search-engine ask">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/77/Ask.com_Logo.svg/1200px-Ask.com_Logo.svg.png" alt="Ask" class="logo">
+                <h2 class="engine-name">Ask</h2>
+                <p class="engine-desc">问答式搜索引擎，可直接回答用户问题</p>
+                <a href="https://www.ask.com" target="_blank" class="search-btn">访问 Ask</a>
+            </div>
+        </div>
+        
+        <footer>
+            <p>© 2023 搜索引擎导航 | 所有商标属于各自所有者 | 最后更新: 2023年11月</p>
+        </footer>
+    </div>
+</body>
+</html>
+<div class="search-box">
+    <input type="text" placeholder="输入搜索内容...">
+    <select id="engine-select">
+        <option value="google">Google</option>
+        <option value="baidu">百度</option>
+        <!-- 其他引擎选项 -->
+    </select>
+    <button onclick="search()">搜索</button>
+</div>
+
+<script>
+    function search() {
+        const query = document.querySelector('.search-box input').value;
+        const engine = document.getElementById('engine-select').value;
+        const urls = {
+            google: `https://www.google.com/search?q=${query}`,
+            baidu: `https://www.baidu.com/s?wd=${query}`,
+            // 其他引擎URL
+        };
+        window.open(urls[engine], '_blank');
+    }
+</script>
